@@ -14,7 +14,7 @@ IBMQ.load_account()
 qc = QuantumCircuit(15) # Create circuit with 15 qubits
 
 # Graph as an adj. List
-A = cinet_graphgen.convert_to_preference_graph("./cinet-inconsistent.txt")
+A = cinet_graphgen.convert_to_preference_graph("./current.cinet")
 print(A[0])
 V  = []
 bitCtr = 0x0
@@ -24,13 +24,13 @@ for e in A[0]:
     if e == 0:
         continue
     # set "bits" accordingly
-    if 'a' in e or 'a,' in e:
+    if 'v0' in e or 'v0,' in e:
         bitCtr = bitCtr | 1
-    if 'b' in e or ',b,' in e:
+    if 'v1' in e or ',v1,' in e:
         bitCtr = bitCtr | 2
-    if 'c' in e or ',c,' in e:
+    if 'v2' in e or ',v2,' in e:
         bitCtr = bitCtr | 4
-    if 'd' in e or ',d' in e:
+    if 'v3' in e or ',v3' in e:
         bitCtr = bitCtr | 8
     V.append(bitCtr)    
     bitCtr = 0x0
