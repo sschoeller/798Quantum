@@ -1,0 +1,61 @@
+\documentclass[12pt]{article}
+
+\usepackage{amsmath, amsfonts, amssymb}
+
+% Title Page
+\title{Quantum Computing: Report 1}
+\author{Scott Schoeller}
+\date{Feb 3, 2021}
+
+
+\begin{document}
+\pagenumbering{gobble}
+\maketitle
+
+\begin{flushleft}
+\newpage
+\pagenumbering{arabic}
+
+\section{Origins of Quantum Computing}
+Richard Feynman, a nuclear physicist, and Yuri Manin, a mathematician, separately proposed the model of quantum computation in the 1980s \cite{cao_quantum_2019}. Progress was made on theoretical algorithms in the 1990s. One of the first quantum computing companies, D-Wave Systems, was founded in 1999. In 2016, IBM brought the power of small quantum computers to the masses with the IBM Quantum Experience. The IBM machines made available to the public currently range  from 1--15 qubits.
+\section{Types of Quantum Computing}
+There are three types of quantum computers that are commercially available -- gate-based, adiabatic and quantum annealing \cite{grumbling_quantum_2019}.
+\subsection{Gate-Based}
+The newer quantum computing designs, such as those at IBM, are based off of quantum logic gates. These are analogous to classical logic gates.
+\subsection{Adiabatic \& Quantum Annealing}
+Adiabatic and quantum annealing computation machines are considered analog \cite{grumbling_quantum_2019}. These quantum computers are based on the energy states of qubits.
+\section{Implications of Quantum Mechanics}
+Quantum mechanics has two major implications for computing. Qubits can be in states of superposition and can be entangled.
+\subsection{Superposition}
+Superposition means that a qubit can hold more than one possible value until it is measured. At that point, the value for that qubit becomes part of a uniform distribution.
+\subsection{Entanglement}
+Entanglement is the effect of one qubit on another. If entanglement occurs on all qubits, the state of a quantum computer becomes exponential \cite{grumbling_quantum_2019}.
+
+\section{Types of Quantum Gates}
+There are a number of operations similar to logic gates in classical computing. Some are unique to the world of quantum computing.
+\subsection{HAD}
+At the core of quantum computing is the Hadamard Gate, also known as HAD for short. The HAD operation allows for a single qubit to be in a superposition of the $|\ 1 >$ and $| \ 0>$ states.
+\subsection{NOT, CNOT and RNOT}
+The NOT operator is analagous to the respective classical operator. In contrast, there are operators not present in ordinary computers of today that act on more than one qubit.
+RNOT is the root of the quantum NOT Gate.
+CNOT, the conditional NOT, acts on two qubits. If a qubit is ``on" then the affected qubit also turns ``on." A related operation is the Trifolli Gate, which is like CNOT, except it acts on three qubits. RNOT is short for the ``Root of Not" operation, which is unique to quantum computing. 
+\subsection{SWAP and CSWAP}
+The SWAP operation allows qubits to trade places. CSWAP is a conditional swap, much like CNOT is a conditional NOT.
+\subsection{PHASE and CPHASE}
+The phase angle with respect to the $|\ 1>$ state matters in quantum computation. The phase can be thought of as a fraction of a qubit in the $|\ 1 >$ state. CHPASE is the conditional form of the PHASE operation.
+
+\section{Expected Implications of Quantum Computing}
+Quantum computing, like any technological breakthrough, is expected to have positive and negative effects. In particular, this computing paradigm is expected to have positive outcomes on scientific problems and negative impacts on current cryptography. 
+\subsection{Science}
+Quantum computing has been applied to quantum systems problems in the physical sciences. Solutions to quantum chemistry problems have been accomplished with existing quantum computing and the application of this form of computing to the physical sciences is expected to expand \cite{cao_quantum_2019}.
+
+\subsection{Cryptography}
+Existing asymmetric cryptography is expected to be adversely affected by sufficiently large quantum computers. Peter Shor proposed an algorithm in 1994 that can break RSA. This algorithm can also be extended to discrete logarithm cryptosystems, including ECC \cite{grumbling_quantum_2019}. The computing power to break 1024-bit RSA is already believed to be within the range of classical supercomputing \cite{bos_security_2009}.
+NIST (the National Institute for Science and Technology) announced a post-quantum cryptography competition in 2016 \cite{chen_post-quantum_nodate}. % https://csrc.nist.gov/projects/post-quantum-cryptography 
+NIST currently is examining seven candidates and eight alternates.
+
+\newpage
+\bibliography{report1.bib}
+\bibliographystyle{acm}
+\end{flushleft}
+\end{document}          
