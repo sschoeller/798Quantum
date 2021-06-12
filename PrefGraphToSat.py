@@ -1,3 +1,4 @@
+# Scott Schoeller (sschoellerSTEM)
 from random import *
 import numpy as np
 from qiskit import IBMQ, execute
